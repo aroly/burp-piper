@@ -35,6 +35,20 @@ messageViewers:
   inputMethod: stdin
   name: gron
   filter: {prefix: '{'}
+- prefix: [pdfinfo]
+  inputMethod: filename
+  name: pdfinfo
+  filter:
+    header:
+      header: Content-Type
+      regex: {pattern: application/pdf}
+- prefix: [exiftool]
+  inputMethod: filename
+  name: exiftool
+  filter:
+    header:
+      header: Content-Type
+      regex: {pattern: image/.*}
 menuItems:
 - prefix: [okular]
   inputMethod: filename
